@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --font-quicksand: "Quicksand", sans-serif;
+  
+  --color-neobrutal-bg: #fcf9f5;
+  --color-neobrutal-ink: #1c1c1a;
+  --color-neobrutal-primary: #5e604d;
+  --color-neobrutal-primary-container: #f5f5dc;
+  --color-neobrutal-secondary: #40627b;
+  --color-neobrutal-secondary-container: #bee1ff;
+  --color-neobrutal-tertiary: #49654c;
+  --color-neobrutal-tertiary-container: #dbfcdb;
+  --color-neobrutal-error: #ba1a1a;
+  --color-neobrutal-error-container: #ffdad6;
+}
+
+/* Graph Paper Background for Neobrutalist style */
+.graph-paper-bg {
+  background-color: #fcf9f5;
+  background-image: 
+    linear-gradient(#e5e2df 1px, transparent 1px),
+    linear-gradient(90deg, #e5e2df 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.graph-paper-bg-large {
+  background-color: #fcf9f5;
+  background-image: 
+    linear-gradient(#e5e2df 1px, transparent 1px),
+    linear-gradient(90deg, #e5e2df 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.project-detail-shell {
+  max-width: 78rem;
+}
+
+.project-pdf-fixed {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .graph-paper-bg-large {
+    background-size: 20px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-detail-shell {
+    padding-right: calc(min(40vw, 40rem) + 1rem);
+  }
+
+  .project-pdf-fixed {
+    bottom: 28px;
+    margin-top: 0;
+    position: fixed;
+    right: max(2.5rem, calc((100vw - 78rem) / 2));
+    top: 6rem;
+    width: min(40vw, 40rem);
+  }
+}
+
+/* Shadow Neobrutalist */
+.neobrutalist-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(28,28,26,1);
+}
+
+.neobrutalist-shadow-hover {
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.neobrutalist-shadow-hover:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px 0px rgba(28,28,26,1);
+}
+
+.neobrutalist-shadow-hover-light {
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.neobrutalist-shadow-hover-light:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px 0px rgba(28,28,26,1);
+}
+
+.neobrutalist-button {
+  border: 2px solid #1c1c1a;
+  box-shadow: 2px 2px 0px 0px #1c1c1a;
+  transition: all 0.1s ease-in-out;
+}
+
+.neobrutalist-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px 0px #1c1c1a;
+}
+
+.neobrutalist-button:active {
+  transform: translate(0px, 0px);
+  box-shadow: none;
+}
+
+/* Animations */
+@keyframes sticker-wobble {
+  0% { transform: rotate(12deg) scale(1); }
+  50% { transform: rotate(16deg) scale(1.03); }
+  100% { transform: rotate(12deg) scale(1); }
+}
+
+.sticker-anim {
+  animation: sticker-wobble 4s infinite ease-in-out;
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0) rotate(-15deg); }
+  50% { transform: translateY(-8px) rotate(-10deg); }
+}
+
+.bounce-slow-anim {
+  animation: bounce-slow 5s infinite ease-in-out;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.95; }
+  50% { opacity: 0.8; }
+}
+
+.pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}

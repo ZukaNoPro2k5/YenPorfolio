@@ -1,0 +1,6 @@
+{
+  "name": "Lơ Mơ AI & Azure Portfolio",
+  "description": "Ứng dụng Portfolio nghiên cứu Y khoa, Xét nghiệm và AI của Nguyễn Hoàng Thảo với hai thiết kế độc đáo: Neobrutalism (Lơ Mơ AI) và Glassmorphism (Azure Portfolio).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

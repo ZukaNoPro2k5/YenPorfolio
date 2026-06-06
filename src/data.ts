@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
       'Em lựa chọn một chủ đề phù hợp và sử dụng AI để hỗ trợ từng giai đoạn sáng tạo nội dung. Em ghi nhận công cụ đã dùng, mô tả cách áp dụng AI vào từng công đoạn và đánh giá hiệu quả AI mang lại đối với sản phẩm cuối cùng.',
     reflection:
       'Quy trình gồm chọn chủ đề, nghiên cứu thông tin, xây dựng ý tưởng, soạn thảo nội dung, thiết kế hình ảnh hoặc video và hoàn thiện sản phẩm. AI hỗ trợ đề xuất ý tưởng, tạo dàn ý, viết bản nháp và gợi ý tối ưu, giúp rút ngắn thời gian và tăng tính sáng tạo.',
-    pdfName: 'Sử dụng Al tạo sinh để hỗ trợ sáng tạo nội dung.pdf',
+    pdfName: 'Sử dụng AI tạo sinh trong sáng tạo nội dung.pdf',
     pdfPath: '/pdfs/ai-sang-tao-noi-dung.pdf'
   },
   {
@@ -131,5 +131,14 @@ export const CONCLUSION: ConclusionSection[] = [
       'Từ trải nghiệm này, em nhận ra tư duy hệ thống, quản lý nội dung và trình bày thông tin sẽ rất quan trọng trong học tập nâng cao và công việc sau này. Em có thể áp dụng các kỹ năng này vào báo cáo, thuyết trình, nghiên cứu và xây dựng hồ sơ nghề nghiệp cá nhân.'
   }
 ];
+
+export const THANK_YOU = {
+  title: 'Lời cảm ơn',
+  paragraphs: [
+    'Em xin được gửi lời tri ân chân thành và sâu sắc nhất tới thầy cô - những người đã truyền tải cho chúng em những tri thức công nghệ số quý báu, kiên nhẫn hướng dẫn và khơi dậy tư duy sáng tạo trong mỗi buổi học.',
+    'Sự tận tụy và những định hướng đầy tâm huyết của thầy cô chính là kim chỉ nam giúp em vượt qua những giới hạn của bản thân, tự tin làm chủ công nghệ để hoàn thiện sản phẩm Portfolio này.',
+    'Kính chúc thầy cô luôn dồi dào sức khỏe, hạnh phúc và luôn giữ mãi ngọn lửa nhiệt huyết để dẫn dắt thêm nhiều thế hệ học trò bước vào kỷ nguyên số của Y học hiện đại!'
+  ]
+};
 
 export const PROFILE_IMAGE = profileImage;

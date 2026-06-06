@@ -16,6 +16,7 @@ import {
   Facebook,
   FileText,
   Flag,
+  HeartHandshake,
   Instagram,
   LayoutDashboard,
   Lightbulb,
@@ -29,7 +30,7 @@ import {
   Search,
   SendHorizontal
 } from 'lucide-react';
-import { CONCLUSION, PROFILE, PROFILE_IMAGE, PROJECTS } from '../data';
+import { CONCLUSION, PROFILE, PROFILE_IMAGE, PROJECTS, THANK_YOU } from '../data';
 import { Project, UserMessage } from '../types';
 
 type Tab = 'home' | 'projects' | 'conclusion' | 'contact';
@@ -635,6 +636,35 @@ export default function NeobrutalistLayout() {
                   );
                 })}
               </div>
+              <motion.article
+                className="relative mt-6 overflow-hidden rounded-xl border-2 border-[#1c1c1a] bg-[#bee1ff] p-4 shadow-[3px_3px_0px_0px_rgba(28,28,26,1)] sm:p-6 sm:shadow-[5px_5px_0px_0px_rgba(28,28,26,1)]"
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.26, duration: 0.24 }}
+                whileHover={{ y: -4, boxShadow: '8px 8px 0px 0px rgba(28,28,26,1)' }}
+              >
+                <div className="absolute -right-10 -top-10 hidden h-32 w-32 rotate-12 rounded-full border-2 border-[#1c1c1a] bg-[#ffdad6] sm:block" />
+                <div className="relative grid gap-5 md:grid-cols-[13rem_1fr] md:items-start">
+                  <div className="flex items-center gap-3 md:block">
+                    <span className="inline-flex rounded-xl border-2 border-[#1c1c1a] bg-white p-2.5 text-[#49654c] shadow-[2px_2px_0px_0px_rgba(28,28,26,1)]">
+                      <HeartHandshake className="h-7 w-7" aria-hidden="true" />
+                    </span>
+                    <div className="md:mt-4">
+                      <span className="font-mono text-[10px] font-black uppercase text-[#42647e]">
+                        Gửi đến thầy cô
+                      </span>
+                      <h2 className="font-mono text-xl font-black text-[#1c1c1a] sm:text-2xl">
+                        {THANK_YOU.title}
+                      </h2>
+                    </div>
+                  </div>
+                  <div className="relative space-y-3 rounded-lg border-2 border-[#1c1c1a] bg-white/90 p-4 text-sm leading-7 text-[#47473f] sm:p-5">
+                    {THANK_YOU.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              </motion.article>
             </motion.section>
           )}
 
